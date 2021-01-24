@@ -28,7 +28,9 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+
+    count variable is local scope on counter1 and global in counter2.
+
   2. Which of the two uses a closure? How can you tell?
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
@@ -44,14 +46,19 @@ function counterMaker() {
 }
 
 const counter1 = counterMaker();
-
+// console.log(counter1())
+// console.log(counter1())
+// console.log(counter1())
 // counter2 code
+
 let count = 0;
 
 function counter2() {
   return count++;
 }
-
+// console.log(counter2())
+// console.log(counter2())
+// console.log(counter2())
 
 /* ⚾️⚾️⚾️ Task 2: inning() ⚾️⚾️⚾️
 Use the inning function below to do the following:
@@ -62,7 +69,7 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
+function inning(num){
     /*Code Here*/
 }
 
